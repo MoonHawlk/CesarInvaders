@@ -1,0 +1,311 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://Town.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 156.746, 7.89494 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 1.23015, -113.105 )
+b = Vector2( -10.8826, 64.7799 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 111.644 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7.70575, 69.5514 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36.8426, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 158.655, 13.4283 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 33.3773, 18.2004 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 33.0259, 16.6385 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 31.25, 11.5 )
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 13.2877
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 23.9129, 18.1209 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 95.1893, 13.3505 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 6.23402, 23.733 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 56.0447, 12.789 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 31.4777, 1.47247 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 96.2175, 6.81184 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 6.78317, 100.251 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 7.11682, 46.8569 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 18.463, 3.47461 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 33.1463, 12.8185 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 6.23164, 18.5344 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 8.12157, 9.08498 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 6.23161, 18.8494 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 71.2006, 6.8911 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 53.523, 10 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 12.157, 24.5687 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 9.3287, 10 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 12.9849, 12.3075 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 12.2751, 12.468 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 14.2269, 8.14241 )
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 5.9972, 7.83453 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 7.97424, 11.4024 )
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 15.8987, 3.74585 )
+
+[sub_resource type="Animation" id=34]
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "finished_fading"
+} ]
+}
+
+[sub_resource type="Animation" id=35]
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="SceneManager" type="Node2D"]
+position = Vector2( -8, 0 )
+script = ExtResource( 1 )
+
+[node name="currentscene" type="Node2D" parent="."]
+
+[node name="Town" parent="currentscene" instance=ExtResource( 2 )]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -12, 0 )
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -26.6796, -70.9983 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -218.562, -130.8 )
+rotation = -0.867429
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -318.779, -318.779 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -303.254, -312.98 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -202.642, -394.985 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -166.899, -416.202 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -51.0605, -373.695 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -35.707, -326.368 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -20.25, -99.5 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -20, -124 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -19.9237, -212.987 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 92.6031, -318.499 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 181.558, -355.54 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 243.855, -366.203 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 155.509, -64.0723 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 278.314, -72.7488 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 371.753, -180.203 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 403.122, -331.374 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 390.441, -283.987 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 364.802, -365.647 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 117.488, -98.2738 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 164.105, -107.723 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 210.722, -98.2738 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 295.924, -200.818 )
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 277.893, -249.609 )
+shape = SubResource( 25 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 236.174, -227.335 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 356.735, -249.609 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -180.151, -159.442 )
+rotation = 0.811578
+shape = SubResource( 28 )
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -228.112, -223.699 )
+rotation = 0.811578
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -309.4, -201.522 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -12.4972, -349.665 )
+shape = SubResource( 31 )
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -13.339, -395.967 )
+shape = SubResource( 31 )
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -155.333, -151.971 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 315.694, -361.927 )
+shape = SubResource( 33 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+anims/fadetoblack = SubResource( 34 )
+anims/fadetonormal = SubResource( 35 )
